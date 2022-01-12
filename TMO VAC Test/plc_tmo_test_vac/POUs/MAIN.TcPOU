@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="MAIN" Id="{99298003-e82d-4dcc-be1c-a70dcd3a7668}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR	
+	LAMP_CLSTR1_PTM_01: FB_PTM_Pfeiffer;
+	st_Pfeiffer_CTRL_LAMP_CLSTR1_PTM_01: ST_PfeifferControl;
+	xEnableComm: INT;
+	fb_PfeifferCom_LAMP_CLSTR1_PTM_01: FB_PFEIFFER_COM;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[(*TURBO Pump*)
+LAMP_CLSTR1_PTM_01(i_xExtIlkOK:= True, iq_stPTM=> );
+
+(*Serial Communication*)
+(*Assign adresses to the pfeiffer controllers connected to this serial terminal*)
+st_Pfeiffer_CTRL_LAMP_CLSTR1_PTM_01.iSerialAddress :=1;
+st_Pfeiffer_CTRL_LAMP_CLSTR1_PTM_01.xEnableComm := TRUE;
+
+(* Instanitate the Function block for serial communication with Pfeiffer*)
+	
+fb_PfeifferCom_LAMP_CLSTR1_PTM_01(astPfeifferControl := st_Pfeiffer_CTRL_LAMP_CLSTR1_PTM_01,
+			   				  astPfeifferStatus:= st_Pfeiffer_RBK_LAMP_CLSTR1_PTM_01,
+							  SerialRXBuffer:= SerialRXBuffer_LAMP_CLSTR1_PTM_01,
+							  SerialTXBuffer:= SerialTXBuffer_LAMP_CLSTR1_PTM_01);
+
+
+(* Copy Status Pv's into the PTM structure*)
+LAMP_CLSTR1_PTM_01.M_Serial_IO(st_Pfeiffer_RBK:= st_Pfeiffer_RBK_LAMP_CLSTR1_PTM_01[1], st_Pfeiffer_CTRL:= st_Pfeiffer_CTRL_LAMP_CLSTR1_PTM_01[1]);
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

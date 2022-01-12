@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="PRG_COM" Id="{90b70853-40f6-4e8a-aafe-1b779aa72948}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_COM
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[(*Instanitate Serial port com function *) 
+fbSerialLineControl_LAMP_CLSTR1_PTM_01(
+	Mode:= SERIALLINEMODE_EL6_22B,
+	pComIn:= ADR(stComIn_LAMP_CLSTR1_PTM_01),
+	pComOut:=ADR(stComOut_LAMP_CLSTR1_PTM_01),
+	SizeComIn:= SIZEOF(stComIn_LAMP_CLSTR1_PTM_01),
+	TxBuffer:= SerialTXBuffer_LAMP_CLSTR1_PTM_01,
+	RxBuffer:= SerialRXBuffer_LAMP_CLSTR1_PTM_01,
+	Error=> ,
+	ErrorID=> );]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <GVL Name="GVL_Devices" Id="{ab95efbf-9059-4faf-a008-9c2c64f63fba}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	
+(*LAMP CLSTR1 Turbo Pump*)
+	{attribute 'TcLinkTo' := 	'.i_xAtSpd			:=	TIIB[LAMP_CLSTR1_PNL1_EP01_EP2338-0002]^Channel 1^Input;
+								 .i_xFaultNC		:=	TIIB[LAMP_CLSTR1_PNL1_EP01_EP2338-0002]^Channel 2^Input;
+								 .i_xRemote			:=	TIIB[LAMP_CLSTR1_PNL1_EP01_EP2338-0002]^Channel 3^Input;
+								 .q_RunDO			:=	TIIB[LAMP_CLSTR1_PNL1_EP02_EP2624-0002]^Channel 1^Output;
+								 .q_xReset 			:=	TIIB[LAMP_CLSTR1_PNL1_EP02_EP2624-0002]^Channel 2^Output				 
+	'}
+	{attribute 'pytmc' := '
+		pv: LAMP:CLSTR1:PTM:01
+		io: io
+	'}
+	LAMP_CLSTR1_PTM_01 : FB_PTM_Pfeiffer;
+
+(*Pfeiffer*)
+	// They share the same serial port
+	st_Pfeiffer_CTRL_LAMP_CLSTR1_PTM_01 		: ARRAY[1..20] OF ST_PfeifferControl;
+	st_Pfeiffer_RBK_LAMP_CLSTR1_PTM_01 			: ARRAY[1..20] OF ST_PfeifferStatus;
+	fb_PfeifferCom_LAMP_CLSTR1_PTM_01 			: FB_PFEIFFER_COM;
+	
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>
