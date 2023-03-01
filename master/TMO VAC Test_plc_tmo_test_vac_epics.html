@@ -1,0 +1,2469 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Types &mdash; pcdshub/lcls-tmo-ptm-test-vac  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/docs-versions-menu.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="DUTs" href="TMO%20VAC%20Test_plc_tmo_test_vac_source.html" />
+    <link rel="prev" title="Settings" href="TMO%20VAC%20Test_plc_tmo_test_vac_summary.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            pcdshub/lcls-tmo-ptm-test-vac
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">TMO VAC Test</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="TMO%20VAC%20Test_pragmas.html">Pragmas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TMO%20VAC%20Test_nc.html">NC Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TMO%20VAC%20Test_boxes.html">Boxes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TMO%20VAC%20Test_links.html">Links</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">plc_tmo_test_vac</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="TMO%20VAC%20Test_plc_tmo_test_vac_summary.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TMO%20VAC%20Test_plc_tmo_test_vac_summary.html#pragmas">Pragmas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TMO%20VAC%20Test_plc_tmo_test_vac_summary.html#libraries">Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TMO%20VAC%20Test_plc_tmo_test_vac_summary.html#symbols">Symbols</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Types</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#lcls-general-fb-logmessage">LCLS_General.FB_LogMessage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lcls-vacuum-fb-ptm-pfeiffer">LCLS_Vacuum.FB_PTM_Pfeiffer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lcls-vacuum-pmps-st-beamparams">LCLS_Vacuum.PMPS.ST_BeamParams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lcls-vacuum-pmps-st-pmps-aperture">LCLS_Vacuum.PMPS.ST_PMPS_Aperture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lcls-vacuum-st-pfeifferptm">LCLS_Vacuum.ST_PfeifferPTM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lcls-vacuum-st-ptm">LCLS_Vacuum.ST_PTM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lcls-vacuum-st-vg">LCLS_Vacuum.ST_VG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lcls-vacuum-serial-st-pfeiffercontrol">LCLS_Vacuum_Serial.ST_PfeifferControl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lcls-vacuum-serial-st-pfeifferstatus">LCLS_Vacuum_Serial.ST_PfeifferStatus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#st-pmps-aperture-io">ST_PMPS_Aperture_IO</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#database-records">Database Records</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TMO%20VAC%20Test_plc_tmo_test_vac_source.html">DUTs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TMO%20VAC%20Test_plc_tmo_test_vac_source.html#gvls">GVLs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TMO%20VAC%20Test_plc_tmo_test_vac_source.html#pous">POUs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pcdshub/lcls-tmo-ptm-test-vac</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Data Types</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/TMO VAC Test_plc_tmo_test_vac_epics.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="data-types">
+<h1>Data Types<a class="headerlink" href="#data-types" title="Permalink to this heading"></a></h1>
+<section id="lcls-general-fb-logmessage">
+<h2>LCLS_General.FB_LogMessage<a class="headerlink" href="#lcls-general-fb-logmessage" title="Permalink to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Record</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Pragma</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$(PREFIX):Reset</p></td>
+<td><p>bo</p></td>
+<td><p>Rising-edge reset of trip</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):Reset_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Rising-edge reset of trip</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):Tripped_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Log message FB tripped</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="lcls-vacuum-fb-ptm-pfeiffer">
+<h2>LCLS_Vacuum.FB_PTM_Pfeiffer<a class="headerlink" href="#lcls-vacuum-fb-ptm-pfeiffer" title="Permalink to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Record</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Pragma</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$(PREFIX):ACCEL_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).iq_stPTM.i_xAccel</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):ALARM_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).iq_stPTM.i_xALARM</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):AT_SPD_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).iq_stPTM.i_xAtSpd</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM AT SPEED</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):BP_SP</p></td>
+<td><p>ao</p></td>
+<td><p>$(SYMBOL).iq_stPTM.rBackingPressureSP</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):BP_SP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).iq_stPTM.rBackingPressureSP</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):CURR_MON_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).iq_stPTM.i_rCurrentMon</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “A”</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):ErrorCode_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).iq_stPTM.i_iErrorCode</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):FAULT_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).iq_stPTM.i_xFault</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):ILK_OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).iq_stPTM.xExtRunOk</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ILK OK</div>
+<div class="line">field: ZNAM ILK ACTIVE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):IP_SP</p></td>
+<td><p>ao</p></td>
+<td><p>$(SYMBOL).iq_stPTM.rInletPressureSP</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):IP_SP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).iq_stPTM.rInletPressureSP</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):LOGGER_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).iq_stPTM.xLog</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ON</div>
+<div class="line">field: ZNAM OFF</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):Power_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).iq_stPTM.i_uiPowerPctRbk</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PWR_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).iq_stPTM.i_diPwr</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):RESET_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).iq_stPTM.q_xReset</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):RST_SW</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).iq_stPTM.xResetSW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):RST_SW_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).iq_stPTM.xResetSW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):RUN_DO_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).iq_stPTM.q_RunDO</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):RUN_SW</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).iq_stPTM.xRunSW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM RUN</div>
+<div class="line">field: ZNAM STOP</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):RUN_SW_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).iq_stPTM.xRunSW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM RUN</div>
+<div class="line">field: ZNAM STOP</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):SET_SPEED</p></td>
+<td><p>longout</p></td>
+<td><p>$(SYMBOL).iq_stPTM.i_dSetSpd</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “Hz”</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):SET_SPEED_MODE</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).iq_stPTM.q_bSetSpd</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):SET_SPEED_MODE_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).iq_stPTM.q_bSetSpd</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):SET_SPEED_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).iq_stPTM.i_dSetSpd</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “Hz”</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):SPEED_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).iq_stPTM.i_diCurSpd</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “Hz”</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):STATE_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>$(SYMBOL).iq_stPTM.eState</p></td>
+<td><div class="line-block">
+<div class="line">field: FRST STOPPING</div>
+<div class="line">field: ONST STARTING</div>
+<div class="line">field: THST FAULT</div>
+<div class="line">field: TWST RUNNING</div>
+<div class="line">field: ZRST STOPPED</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):TEMP_MON_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).iq_stPTM.i_rTempMon</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “C”</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):TempBearing_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).iq_stPTM.i_diBrngTemp</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):TempElec_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).iq_stPTM.i_diElecTemp</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):TempFault_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).iq_stPTM.i_xTempFault</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):TempMotor_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).iq_stPTM.i_diMtrTemp</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):TempPump_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).iq_stPTM.i_diBtmTemp</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):WARN_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).iq_stPTM.i_xWarn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):WarningCode_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).iq_stPTM.i_iWarningCode</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="lcls-vacuum-pmps-st-beamparams">
+<h2>LCLS_Vacuum.PMPS.ST_BeamParams<a class="headerlink" href="#lcls-vacuum-pmps-st-beamparams" title="Permalink to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Record</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Pragma</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$(PREFIX):Cohort_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Cohort inc on each arb cycle</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PhotonEnergyRanges_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).neVRange</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU eV</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):Rate_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).nRate</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU Hz</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):Transmission_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).nTran</p></td>
+<td><div class="line-block">
+<div class="line">field: HOPR 1</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):Valid_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).xValid</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):Veto_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>$(SYMBOL).aVetoDevices</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="lcls-vacuum-pmps-st-pmps-aperture">
+<h2>LCLS_Vacuum.PMPS.ST_PMPS_Aperture<a class="headerlink" href="#lcls-vacuum-pmps-st-pmps-aperture" title="Permalink to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Record</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Pragma</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$(PREFIX):Height_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).Height</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU mm</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).xOK</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):Width_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).Width</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU mm</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="lcls-vacuum-st-pfeifferptm">
+<h2>LCLS_Vacuum.ST_PfeifferPTM<a class="headerlink" href="#lcls-vacuum-st-pfeifferptm" title="Permalink to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Record</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Pragma</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$(PREFIX):ACCEL_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).i_xAccel</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):ALARM_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).i_xALARM</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):AT_SPD_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).i_xAtSpd</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM AT SPEED</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):BP_SP</p></td>
+<td><p>ao</p></td>
+<td><p>$(SYMBOL).rBackingPressureSP</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):BP_SP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).rBackingPressureSP</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):CURR_MON_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).i_rCurrentMon</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “A”</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):ErrorCode_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).i_iErrorCode</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):FAULT_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).i_xFault</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):ILK_OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).xExtRunOk</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ILK OK</div>
+<div class="line">field: ZNAM ILK ACTIVE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):IP_SP</p></td>
+<td><p>ao</p></td>
+<td><p>$(SYMBOL).rInletPressureSP</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):IP_SP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).rInletPressureSP</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):LOGGER_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).xLog</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ON</div>
+<div class="line">field: ZNAM OFF</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):Power_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).i_uiPowerPctRbk</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PWR_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).i_diPwr</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):RESET_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).q_xReset</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):RST_SW</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).xResetSW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):RST_SW_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).xResetSW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):RUN_DO_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).q_RunDO</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):RUN_SW</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).xRunSW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM RUN</div>
+<div class="line">field: ZNAM STOP</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):RUN_SW_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).xRunSW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM RUN</div>
+<div class="line">field: ZNAM STOP</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):SET_SPEED</p></td>
+<td><p>longout</p></td>
+<td><p>$(SYMBOL).i_dSetSpd</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “Hz”</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):SET_SPEED_MODE</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).q_bSetSpd</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):SET_SPEED_MODE_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).q_bSetSpd</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):SET_SPEED_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).i_dSetSpd</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “Hz”</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):SPEED_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).i_diCurSpd</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “Hz”</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):STATE_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>$(SYMBOL).eState</p></td>
+<td><div class="line-block">
+<div class="line">field: FRST STOPPING</div>
+<div class="line">field: ONST STARTING</div>
+<div class="line">field: THST FAULT</div>
+<div class="line">field: TWST RUNNING</div>
+<div class="line">field: ZRST STOPPED</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):TEMP_MON_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).i_rTempMon</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “C”</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):TempBearing_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).i_diBrngTemp</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):TempElec_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).i_diElecTemp</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):TempFault_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).i_xTempFault</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):TempMotor_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).i_diMtrTemp</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):TempPump_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).i_diBtmTemp</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):WARN_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).i_xWarn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):WarningCode_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).i_iWarningCode</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="lcls-vacuum-st-ptm">
+<h2>LCLS_Vacuum.ST_PTM<a class="headerlink" href="#lcls-vacuum-st-ptm" title="Permalink to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Record</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Pragma</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$(PREFIX):ACCEL_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).i_xAccel</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):ALARM_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).i_xALARM</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):AT_SPD_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).i_xAtSpd</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM AT SPEED</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):BP_SP</p></td>
+<td><p>ao</p></td>
+<td><p>$(SYMBOL).rBackingPressureSP</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):BP_SP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).rBackingPressureSP</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):CURR_MON_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).i_rCurrentMon</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “A”</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):FAULT_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).i_xFault</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):ILK_OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).xExtRunOk</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ILK OK</div>
+<div class="line">field: ZNAM ILK ACTIVE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):IP_SP</p></td>
+<td><p>ao</p></td>
+<td><p>$(SYMBOL).rInletPressureSP</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):IP_SP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).rInletPressureSP</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):LOGGER_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).xLog</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ON</div>
+<div class="line">field: ZNAM OFF</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):RST_SW</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).xResetSW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):RST_SW_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).xResetSW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):RUN_DO_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).q_RunDO</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):RUN_SW</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).xRunSW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM RUN</div>
+<div class="line">field: ZNAM STOP</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):RUN_SW_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).xRunSW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM RUN</div>
+<div class="line">field: ZNAM STOP</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):SPEED_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).i_diCurSpd</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “Hz”</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):STATE_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>$(SYMBOL).eState</p></td>
+<td><div class="line-block">
+<div class="line">field: FRST STOPPING</div>
+<div class="line">field: ONST STARTING</div>
+<div class="line">field: THST FAULT</div>
+<div class="line">field: TWST RUNNING</div>
+<div class="line">field: ZRST STOPPED</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):TEMP_MON_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).i_rTempMon</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “C”</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):WARN_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).i_xWarn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="lcls-vacuum-st-vg">
+<h2>LCLS_Vacuum.ST_VG<a class="headerlink" href="#lcls-vacuum-st-vg" title="Permalink to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Record</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Pragma</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$(PREFIX):AT_VAC_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).xAT_VAC</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):Auto_On</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):Auto_On_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):AutoOn_timer_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).iAutoOnTimer</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):DISC_ACTIVE_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).i_xDisc_Active</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM DISC ACTIVE</div>
+<div class="line">field: ZNAM NO DISC</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):HV_DIS_DO_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).q_xHV_DIS</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):HV_ON_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).i_xHV_ON</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):HV_SW</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).xHV_SW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ON</div>
+<div class="line">field: ZNAM OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):HV_SW_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).xHV_SW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ON</div>
+<div class="line">field: ZNAM OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):ILK_OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).xILKOk</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM OK</div>
+<div class="line">field: ZNAM NOT OK</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):LOGGER</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).xLog</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ON</div>
+<div class="line">field: ZNAM OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):LOGGER_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).xLog</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ON</div>
+<div class="line">field: ZNAM OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PRESS_AI_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).i_iPRESS_R</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PRESS_OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).xPRESS_OK</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ON</div>
+<div class="line">field: ZNAM OFF</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PRESS_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).rPRESS</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PRO_SP</p></td>
+<td><p>ao</p></td>
+<td><p>$(SYMBOL).rPRO_SP</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PRO_SP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).rPRO_SP</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):SP_HYS</p></td>
+<td><p>ao</p></td>
+<td><p>$(SYMBOL).rHYS_PR</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):SP_HYS_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).rHYS_PR</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):STATE_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>$(SYMBOL).eState</p></td>
+<td><div class="line-block">
+<div class="line">field: FRST Starting</div>
+<div class="line">field: FVST Valid</div>
+<div class="line">field: ONST GaugeDisconnected</div>
+<div class="line">field: SVST ValidLo</div>
+<div class="line">field: SXST ValidHi</div>
+<div class="line">field: THST PressInvalid</div>
+<div class="line">field: TWST OoR</div>
+<div class="line">field: ZRST Off</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):VAC_SP</p></td>
+<td><p>ao</p></td>
+<td><p>$(SYMBOL).rVAC_SP</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):VAC_SP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).rVAC_SP</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="lcls-vacuum-serial-st-pfeiffercontrol">
+<h2>LCLS_Vacuum_Serial.ST_PfeifferControl<a class="headerlink" href="#lcls-vacuum-serial-st-pfeiffercontrol" title="Permalink to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Record</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Pragma</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$(PREFIX):ADDR</p></td>
+<td><p>longout</p></td>
+<td><p>$(SYMBOL).iSerialAddress</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):ADDR_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).iSerialAddress</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):COMM_EN</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).xEnableComm</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):COMM_EN_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).xEnableComm</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):ERR_RST</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).xErrorAck_009</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):ERR_RST_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).xErrorAck_009</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):EXT_ILK_OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).xPumpingStation_010</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ILK OK</div>
+<div class="line">field: ZNAM ILK ACTIVE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):ILK_OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).xIlk</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ILK OK</div>
+<div class="line">field: ZNAM ILK ACTIVE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):RUN_DO_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).xMotorPump_023</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):RUN_SW</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).xRunSW</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):RUN_SW_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).xRunSW</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):SetPumpSpeed_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).iSetRotationSpeed_707</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="lcls-vacuum-serial-st-pfeifferstatus">
+<h2>LCLS_Vacuum_Serial.ST_PfeifferStatus<a class="headerlink" href="#lcls-vacuum-serial-st-pfeifferstatus" title="Permalink to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Record</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Pragma</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$(PREFIX):DriveCurrent_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).lrDriveCurrent_310</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):DrivePower_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).diDrivePower_316</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):ErrorCode_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).iErrorCode_303</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):ErrorMessage_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>$(SYMBOL).sErrorCode_303</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):ExcessPumpTemp_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).xExcessTempPump_305</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):GasMode_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).iGasMode_027</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):Power_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).uiPowerPct_708</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PumpAccelerating_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).xPumpAccelerating_307</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PumpingStation_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).xPumpingStation_010</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ILK OK</div>
+<div class="line">field: ZNAM ILK ACTIVE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PumpingStation_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).xMotorPump_023</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PumpSpeed_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).diActiveRotationSpeed_309</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):TempBearing_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).diTempBearng_342</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):TempElect_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).diTempElec_326</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):TempMotor_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).diTempMotor_346</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):TempPump_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).diTempPmpBot_330</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):Timeout_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).xTimeout</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):TotationSpeedAttn_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).xRotationSpeedAttn_306</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):WarningCode_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).iWarningCode_303</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="st-pmps-aperture-io">
+<h2>ST_PMPS_Aperture_IO<a class="headerlink" href="#st-pmps-aperture-io" title="Permalink to this heading"></a></h2>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Record</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Pragma</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$(PREFIX):Height_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).Height</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU mm</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).xOK</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):Width_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).Width</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU mm</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="database-records">
+<h1>Database Records<a class="headerlink" href="#database-records" title="Permalink to this heading"></a></h1>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Record</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Pragma</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>LAMP:CLSTR1:PTM:01:STATE_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>GVL_Devices.LAMP_CLSTR1_PTM_01.iq_stPTM.eState</p></td>
+<td><div class="line-block">
+<div class="line">field: FRST STOPPING</div>
+<div class="line">field: ONST STARTING</div>
+<div class="line">field: THST FAULT</div>
+<div class="line">field: TWST RUNNING</div>
+<div class="line">field: ZRST STOPPED</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>LAMP:CLSTR1:PTM:01:SET_SPEED_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>GVL_Devices.LAMP_CLSTR1_PTM_01.iq_stPTM.i_dSetSpd</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “Hz”</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>LAMP:CLSTR1:PTM:01:SET_SPEED</p></td>
+<td><p>longout</p></td>
+<td><p>GVL_Devices.LAMP_CLSTR1_PTM_01.iq_stPTM.i_dSetSpd</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “Hz”</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>LAMP:CLSTR1:PTM:01:TempBearing_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>GVL_Devices.LAMP_CLSTR1_PTM_01.iq_stPTM.i_diBrngTemp</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>LAMP:CLSTR1:PTM:01:TempPump_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>GVL_Devices.LAMP_CLSTR1_PTM_01.iq_stPTM.i_diBtmTemp</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>LAMP:CLSTR1:PTM:01:SPEED_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>GVL_Devices.LAMP_CLSTR1_PTM_01.iq_stPTM.i_diCurSpd</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “Hz”</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>LAMP:CLSTR1:PTM:01:TempElec_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>GVL_Devices.LAMP_CLSTR1_PTM_01.iq_stPTM.i_diElecTemp</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>LAMP:CLSTR1:PTM:01:TempMotor_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>GVL_Devices.LAMP_CLSTR1_PTM_01.iq_stPTM.i_diMtrTemp</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>LAMP:CLSTR1:PTM:01:PWR_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>GVL_Devices.LAMP_CLSTR1_PTM_01.iq_stPTM.i_diPwr</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>LAMP:CLSTR1:PTM:01:ErrorCode_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>GVL_Devices.LAMP_CLSTR1_PTM_01.iq_stPTM.i_iErrorCode</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>LAMP:CLSTR1:PTM:01:WarningCode_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>GVL_Devices.LAMP_CLSTR1_PTM_01.iq_stPTM.i_iWarningCode</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>LAMP:CLSTR1:PTM:01:CURR_MON_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>GVL_Devices.LAMP_CLSTR1_PTM_01.iq_stPTM.i_rCurrentMon</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “A”</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>LAMP:CLSTR1:PTM:01:TEMP_MON_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>GVL_Devices.LAMP_CLSTR1_PTM_01.iq_stPTM.i_rTempMon</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “C”</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>LAMP:CLSTR1:PTM:01:Power_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>GVL_Devices.LAMP_CLSTR1_PTM_01.iq_stPTM.i_uiPowerPctRbk</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>LAMP:CLSTR1:PTM:01:ALARM_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Devices.LAMP_CLSTR1_PTM_01.iq_stPTM.i_xALARM</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>LAMP:CLSTR1:PTM:01:ACCEL_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Devices.LAMP_CLSTR1_PTM_01.iq_stPTM.i_xAccel</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>LAMP:CLSTR1:PTM:01:AT_SPD_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Devices.LAMP_CLSTR1_PTM_01.iq_stPTM.i_xAtSpd</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM AT SPEED</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>LAMP:CLSTR1:PTM:01:FAULT_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Devices.LAMP_CLSTR1_PTM_01.iq_stPTM.i_xFault</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>LAMP:CLSTR1:PTM:01:TempFault_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Devices.LAMP_CLSTR1_PTM_01.iq_stPTM.i_xTempFault</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>LAMP:CLSTR1:PTM:01:WARN_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Devices.LAMP_CLSTR1_PTM_01.iq_stPTM.i_xWarn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>LAMP:CLSTR1:PTM:01:RUN_DO_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Devices.LAMP_CLSTR1_PTM_01.iq_stPTM.q_RunDO</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>LAMP:CLSTR1:PTM:01:SET_SPEED_MODE_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Devices.LAMP_CLSTR1_PTM_01.iq_stPTM.q_bSetSpd</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>LAMP:CLSTR1:PTM:01:SET_SPEED_MODE</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Devices.LAMP_CLSTR1_PTM_01.iq_stPTM.q_bSetSpd</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>LAMP:CLSTR1:PTM:01:RESET_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Devices.LAMP_CLSTR1_PTM_01.iq_stPTM.q_xReset</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>LAMP:CLSTR1:PTM:01:BP_SP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>GVL_Devices.LAMP_CLSTR1_PTM_01.iq_stPTM.rBackingPressureSP</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>LAMP:CLSTR1:PTM:01:BP_SP</p></td>
+<td><p>ao</p></td>
+<td><p>GVL_Devices.LAMP_CLSTR1_PTM_01.iq_stPTM.rBackingPressureSP</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>LAMP:CLSTR1:PTM:01:IP_SP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>GVL_Devices.LAMP_CLSTR1_PTM_01.iq_stPTM.rInletPressureSP</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>LAMP:CLSTR1:PTM:01:IP_SP</p></td>
+<td><p>ao</p></td>
+<td><p>GVL_Devices.LAMP_CLSTR1_PTM_01.iq_stPTM.rInletPressureSP</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>LAMP:CLSTR1:PTM:01:ILK_OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Devices.LAMP_CLSTR1_PTM_01.iq_stPTM.xExtRunOk</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ILK OK</div>
+<div class="line">field: ZNAM ILK ACTIVE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>LAMP:CLSTR1:PTM:01:LOGGER_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Devices.LAMP_CLSTR1_PTM_01.iq_stPTM.xLog</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ON</div>
+<div class="line">field: ZNAM OFF</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>LAMP:CLSTR1:PTM:01:RST_SW_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Devices.LAMP_CLSTR1_PTM_01.iq_stPTM.xResetSW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>LAMP:CLSTR1:PTM:01:RST_SW</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Devices.LAMP_CLSTR1_PTM_01.iq_stPTM.xResetSW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>LAMP:CLSTR1:PTM:01:RUN_SW_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Devices.LAMP_CLSTR1_PTM_01.iq_stPTM.xRunSW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM RUN</div>
+<div class="line">field: ZNAM STOP</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>LAMP:CLSTR1:PTM:01:RUN_SW</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Devices.LAMP_CLSTR1_PTM_01.iq_stPTM.xRunSW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM RUN</div>
+<div class="line">field: ZNAM STOP</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)LCLSGeneral:GlobalLogTrickleTrip_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Tripped by overall log count</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)LCLSGeneral:LogHost_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>The log host IP address</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)LCLSGeneral:LogHost</p></td>
+<td><p>waveform</p></td>
+<td><p>The log host IP address</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)LCLSGeneral:LogPort_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>The log host UDP port</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)LCLSGeneral:LogPort</p></td>
+<td><p>longout</p></td>
+<td><p>The log host UDP port</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)LCLSGeneral:LogMessageCount_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Total log messages on the last cycle</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)AccumulatedFastFaults_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>PMPS_GVL.AccumulatedFF</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)SuccessfulPreemptions_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>PMPS_GVL.SuccessfulPreemption</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)0RateBeamCnst:Veto_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>0-rate beam constant</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)0RateBeamCnst:Cohort_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Cohort inc on each arb cycle</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)0RateBeamCnst:Rate_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>0-rate beam constant</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">field: EGU Hz</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)0RateBeamCnst:Transmission_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>0-rate beam constant</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">field: HOPR 1</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)0RateBeamCnst:PhotonEnergyRanges_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>0-rate beam constant</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">field: EGU eV</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)0RateBeamCnst:Valid_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>0-rate beam constant</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)FullBeamCnst:Veto_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>Full beam constant</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)FullBeamCnst:Cohort_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Cohort inc on each arb cycle</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)FullBeamCnst:Rate_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Full beam constant</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">field: EGU Hz</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)FullBeamCnst:Transmission_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>Full beam constant</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">field: HOPR 1</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)FullBeamCnst:PhotonEnergyRanges_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Full beam constant</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">field: EGU eV</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)FullBeamCnst:Valid_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>Full beam constant</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)eVRangeCnst_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>Active eV Range constants</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">field: EGU eV</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)K:eVRangeCnst_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>eV Range constants</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">field: EGU eV</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)L:eVRangeCnst_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>eV Range constants</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">field: EGU eV</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)eVRangeHyst_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>eV Range hystersis</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">field: EGU eV</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)CurrentBP:Veto_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>PMPS_GVL.stCurrentBeamParameters.aVetoDevices</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)CurrentBP:Cohort_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Cohort inc on each arb cycle</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)CurrentBP:Rate_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>PMPS_GVL.stCurrentBeamParameters.nRate</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">field: EGU Hz</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)CurrentBP:Transmission_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>PMPS_GVL.stCurrentBeamParameters.nTran</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">field: HOPR 1</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)CurrentBP:PhotonEnergyRanges_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>PMPS_GVL.stCurrentBeamParameters.neVRange</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">field: EGU eV</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)CurrentBP:Valid_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>PMPS_GVL.stCurrentBeamParameters.xValid</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)RequestedBP:Veto_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>PMPS_GVL.stRequestedBeamParameters.aVetoDevices</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)RequestedBP:Cohort_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>Cohort inc on each arb cycle</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)RequestedBP:Rate_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>PMPS_GVL.stRequestedBeamParameters.nRate</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">field: EGU Hz</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)RequestedBP:Transmission_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>PMPS_GVL.stRequestedBeamParameters.nTran</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">field: HOPR 1</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)RequestedBP:PhotonEnergyRanges_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>PMPS_GVL.stRequestedBeamParameters.neVRange</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">field: EGU eV</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)RequestedBP:Valid_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>PMPS_GVL.stRequestedBeamParameters.xValid</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="TMO%20VAC%20Test_plc_tmo_test_vac_summary.html" class="btn btn-neutral float-left" title="Settings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="TMO%20VAC%20Test_plc_tmo_test_vac_source.html" class="btn btn-neutral float-right" title="DUTs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, SLAC National Accelerator Laboratory.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
