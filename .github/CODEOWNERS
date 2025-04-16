@@ -1,0 +1,20 @@
+# default group
+* @pcdshub/tmo-members @pcdshub/vacuum-sme
+
+# language-specific group(s)
+## TWINCAT files
+*.tsproj @pcdshub/tmo-members @pcdshub/twincat-reviewers @pcdshub/vacuum-sme
+*.plcproj @pcdshub/tmo-members @pcdshub/twincat-reviewers @pcdshub/vacuum-sme
+*.tmc @pcdshub/tmo-members @pcdshub/twincat-reviewers @pcdshub/vacuum-sme
+*.tpr @pcdshub/tmo-members @pcdshub/twincat-reviewers @pcdshub/vacuum-sme
+*.xti @pcdshub/tmo-members @pcdshub/twincat-reviewers @pcdshub/vacuum-sme
+*.TcTTO @pcdshub/tmo-members @pcdshub/twincat-reviewers @pcdshub/vacuum-sme
+*.TcPOU @pcdshub/tmo-members @pcdshub/twincat-reviewers @pcdshub/vacuum-sme
+*.TcDUT @pcdshub/tmo-members @pcdshub/twincat-reviewers @pcdshub/vacuum-sme
+*.TcGVL @pcdshub/tmo-members @pcdshub/twincat-reviewers @pcdshub/vacuum-sme
+*.TcVis @pcdshub/tmo-members @pcdshub/twincat-reviewers @pcdshub/vacuum-sme
+*.TcVMO @pcdshub/tmo-members @pcdshub/twincat-reviewers @pcdshub/vacuum-sme
+*.TcGTLO @pcdshub/tmo-members @pcdshub/twincat-reviewers @pcdshub/vacuum-sme
+
+# github folder holds administrative files
+.github/** @pcdshub/software-admin
